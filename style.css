@@ -21,6 +21,7 @@ and (min-device-width: 480px)
 }
 
 nav{
+    box-sizing: border-box;
     width: 100%;
     display: inline-flex;
     flex-direction: row;
@@ -29,9 +30,15 @@ nav{
     align-content:center;
 }
 
-.logo{
+.button{
     width: 60px;
-    /*padding: 5px;*/
+    height: 60px;
+    border-style: none;
+    border-radius: 50%;
+    cursor: pointer;
+    justify-self: center;
+    align-self: center;
+    outline: 0;
 }
 
 .containerdelboton{
@@ -100,6 +107,49 @@ nav{
     margin: 30px 15px 30px 15px;
     background-color: darkgray;    
     border-radius: 30px;
+    box-shadow: 5px 5px 5px rgba(180, 180, 180, 0.7);
+}
+
+.overlay {
+    /*position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;*/
+    width: 200px;
+    height: 300px;  
+    border-radius: 30px;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: rgba(238,238,238,0.9);
+}
+
+.icon {
+    color: white;
+    font-size: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+/*
+.contenedor1 .capa{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(238,238,238,0.9);
+    transition: all 500ms ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}*/
+
+.contenedor1:hover .overlay{
+    opacity: 1;
+    visibility: visible;
 }
 
 .contenedor2{
@@ -108,6 +158,7 @@ nav{
     margin: 30px 15px 30px 15px;
     background-color: darkgray;    
     border-radius: 30px;
+    box-shadow: 5px 5px 5px rgba(180, 180, 180, 0.7);
 }
 
 img{
